@@ -1,0 +1,22 @@
+{
+  "name": "fp/composer",
+  "require": {
+    "friendsofphp/php-cs-fixer": "*",
+    "phpmd/phpmd": "^2.9",
+    "phpstan/phpstan": "*",
+    "phpunit/phpunit": "^9.4",
+    "phing/phing": "^2.16",
+    "phpdocumentor/phpdocumentor": "^3.0",
+    "sebastian/phpcpd": "^6.0",
+    "phploc/phploc": "^7.0",
+    "squizlabs/php_codesniffer": "^3.5"
+  },
+  "authors": [
+    {
+      "name": "Eugene Bravov",
+      "email": "eugene.bravov@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
