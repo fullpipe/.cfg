@@ -1,0 +1,20 @@
+export PATH="$GOPATH/bin:$PATH";
+#export PATH=~/miniconda3/bin:$PATH
+export PATH="/usr/local/sbin:$PATH"
+export PATH=~/.config/composer/vendor/bin:$PATH
+export PATH="/usr/local/opt/node@12/bin:$PATH"
+
+# avdmanager, sdkmanager
+export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
+
+# adb, logcat
+export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+
+# emulator
+export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+
+export PATH="$HOME/.fastlane/bin:$PATH"
+
+
+export PATH="/usr/local/opt/php@7.3/bin:$PATH"
+export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
