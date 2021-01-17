@@ -372,4 +372,4 @@ nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 
 
-lua require('symbols')
+"lua require('symbols')
