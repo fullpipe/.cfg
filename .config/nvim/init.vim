@@ -10,6 +10,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
@@ -28,6 +29,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'justinmk/vim-sneak'
     Plug 'arp242/auto_mkdir2.vim'
     Plug 'MattesGroeger/vim-bookmarks'
+    Plug 'vuciv/vim-bujo'
     "Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
     " Syntax
