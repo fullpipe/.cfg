@@ -1,0 +1,9 @@
+pomodoro:
+  work: 25
+  rest: 5
+  repeats: 4
+work_ip: 134.209.163.82
+domains:
+  bad:
+    - facebook.com
+    - youtube.com
