@@ -2,8 +2,8 @@ hs.loadSpoon('Caps2Esc'):start()
 hs.loadSpoon('DownloadAtp'):start('/Volumes/U5/Datacasts')
 hs.loadSpoon('RightLayout'):add("Alacritty", "ABC"):add("Slack", "Russian"):start()
 
-hs.loadSpoon("ReloadConfiguration")
-spoon.ReloadConfiguration:start()
+--hs.loadSpoon("ReloadConfiguration")
+--spoon.ReloadConfiguration:start()
 
 local function catcher(event)
     if event:getFlags()['cmd'] and event:getCharacters() == "h" then

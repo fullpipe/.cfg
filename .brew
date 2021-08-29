@@ -1,0 +1,17 @@
+brew install starship
+brew install svn
+brew tap homebrew/cask-fonts
+brew install --cask font-source-code-pro
+brew install --cask font-sauce-code-pro-nerd-font
+brew install node
+brew install go
+brew install fzf
+brew install composer
+brew install docker-sync
+brew install git-lfs
+brew install --cask sequel-ace
+brew install hammerspoon
+git clone --depth 1 git@github.com:fullpipe/RightLayout.spoon.git ~/.hammerspoon/Spoons/RightLayout.spoon
+git clone --depth 1 git@github.com:fullpipe/DownloadAtp.spoon.git ~/.hammerspoon/Spoons/DownloadAtp.spoon
+git clone --depth 1 git@github.com:fullpipe/Caps2Esc.spoon.git ~/.hammerspoon/Spoons/Caps2Esc.spoon
+brew install jq
