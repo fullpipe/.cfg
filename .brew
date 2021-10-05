@@ -15,3 +15,10 @@ git clone --depth 1 git@github.com:fullpipe/RightLayout.spoon.git ~/.hammerspoon
 git clone --depth 1 git@github.com:fullpipe/DownloadAtp.spoon.git ~/.hammerspoon/Spoons/DownloadAtp.spoon
 git clone --depth 1 git@github.com:fullpipe/Caps2Esc.spoon.git ~/.hammerspoon/Spoons/Caps2Esc.spoon
 brew install jq
+brew install lua
+brew install --cask Transmission
+
+brew install php
+pecl install xdebug
+
+brew install mermaid-cli
