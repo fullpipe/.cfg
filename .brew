@@ -22,3 +22,7 @@ brew install php
 pecl install xdebug
 
 brew install mermaid-cli
+
+brew install kubectl
+brew install kubectx
+brew install lens
