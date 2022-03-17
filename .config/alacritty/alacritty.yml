@@ -3,7 +3,8 @@
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
-#env:
+env:
+  TERM: xterm-256color
 # TERM variable
 #
 # This value is used to set the `$TERM` environment variable for
@@ -32,6 +33,7 @@ window:
   # Spread additional padding evenly around the terminal content.
   dynamic_padding: false
 
+  opacity: 1.0
 # Window decorations
 #
 # Values for `decorations`:
@@ -266,7 +268,6 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 1.0
 
 # Mouse bindings
 #

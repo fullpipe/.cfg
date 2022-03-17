@@ -1,3 +1,4 @@
+brew install --cask alacritty
 brew install starship
 brew install svn
 brew tap homebrew/cask-fonts
@@ -9,6 +10,7 @@ brew install fzf
 brew install composer
 brew install docker-sync
 brew install git-lfs
+brew install --cask github
 brew install --cask sequel-ace
 brew install hammerspoon
 git clone --depth 1 git@github.com:fullpipe/RightLayout.spoon.git ~/.hammerspoon/Spoons/RightLayout.spoon
@@ -17,6 +19,9 @@ git clone --depth 1 git@github.com:fullpipe/Caps2Esc.spoon.git ~/.hammerspoon/Sp
 brew install jq
 brew install lua
 brew install --cask Transmission
+brew install tmux
+brew install htop
+brew install neovim --HEAD
 
 brew install php
 pecl install xdebug
@@ -26,3 +31,14 @@ brew install mermaid-cli
 brew install kubectl
 brew install kubectx
 brew install lens
+
+brew install python
+brew install --cask visual-studio-code
+brew install --cask dbeaver-community
+brew install --cask insomnia
+brew install --cask joplin
+brew install coreutils
+
+
+brew install --cask temurin
+brew install graphviz
