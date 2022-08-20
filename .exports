@@ -56,3 +56,6 @@ export GEM_HOME="$HOME/.gem"
 
 . "$HOME/.cargo/env"
 
+export GOROOT="/usr/local/opt/go/libexec"
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin

@@ -37,8 +37,12 @@ brew install --cask visual-studio-code
 brew install --cask dbeaver-community
 brew install --cask insomnia
 brew install --cask joplin
+brew install --cask obsidian
 brew install coreutils
-
+brew install ripgrep
 
 brew install --cask temurin
 brew install graphviz
+brew install watch
+brew install lux
+brew install notion
