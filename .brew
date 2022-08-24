@@ -25,7 +25,7 @@ brew install neovim --HEAD
 
 brew install php
 pecl install xdebug
-
+brew install wget
 brew install mermaid-cli
 
 brew install kubectl
@@ -51,3 +51,12 @@ brew install notion
 brew tap homebrew/cask-drivers
 brew install --cask qmk-toolbox
 
+# nvim
+npm install -g prettier
+cargo install stylua
+brew install google-java-format
+brew install flake8
+npm install -g neovim
+pip3 install git+https://github.com/psf/black
+brew install julia
+brew install fd
