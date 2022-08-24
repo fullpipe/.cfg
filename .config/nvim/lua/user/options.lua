@@ -51,3 +51,7 @@ vim.g.strip_whitespace_on_save = 1
 vim.g.strip_whitelines_at_eof = 1
 
 vim.g.loaded_perl_provider = 0 -- disable perl
+
+vim.cmd "set noshowcmd"
+vim.cmd "set noshowmode"
+
