@@ -46,3 +46,8 @@ brew install graphviz
 brew install watch
 brew install lux
 brew install notion
+
+# keyboard 
+brew tap homebrew/cask-drivers
+brew install --cask qmk-toolbox
+
