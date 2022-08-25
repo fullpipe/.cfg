@@ -68,6 +68,7 @@ nnoremap("<leader>e", ":NvimTreeToggle<CR>")
 
 -- Telescope
 nnoremap("<leader>ff", ":Telescope find_files<CR>")
+nnoremap("<C-p>", ":Telescope find_files<CR>")
 nnoremap("<leader>ft", ":Telescope live_grep<CR>")
 nnoremap("<leader>fp", ":Telescope projects<CR>")
 nnoremap("<leader>fb", ":Telescope buffers<CR>")

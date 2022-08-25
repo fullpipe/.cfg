@@ -61,3 +61,4 @@ pip3 install git+https://github.com/psf/black
 brew install julia
 brew install fd
 brew install lua-language-server
+brew install yaml-language-server

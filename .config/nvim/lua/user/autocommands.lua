@@ -44,3 +44,12 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
     vim.highlight.on_yank { higroup = "Visual", timeout = 300 }
   end,
 })
+
+-- Format on save
+-- TODO: it is good to have keymap to save without autoformat
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+    --pattern = {}, 
+    callback = function ()
+        vim.lsp.buf.format({ async = false })
+    end
+})

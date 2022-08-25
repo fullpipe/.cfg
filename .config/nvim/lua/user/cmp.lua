@@ -49,7 +49,6 @@ cmp.setup({
 			luasnip.lsp_expand(args.body) -- For `luasnip` users.
 		end,
 	},
-
 	mapping = cmp.mapping.preset.insert({
 		["<C-k>"] = cmp.mapping.select_prev_item(),
 		["<C-j>"] = cmp.mapping.select_next_item(),
@@ -97,10 +96,10 @@ cmp.setup({
 		format = function(entry, vim_item)
 			vim_item.kind = kind_icons[vim_item.kind]
 			vim_item.menu = ({
-				nvim_lsp = "",
-				nvim_lua = "",
-				luasnip = "",
-				buffer = "",
+				nvim_lsp = "[lsp]",
+				nvim_lua = "[api]",
+				luasnip = "[snip]",
+				buffer = "[buf]",
 				path = "",
 				emoji = "",
 			})[entry.source.name]
@@ -109,8 +108,8 @@ cmp.setup({
 	},
 	sources = {
 		{ name = "nvim_lsp" },
-		{ name = "nvim_lua" },
 		{ name = "luasnip" },
+		{ name = "nvim_lua" },
 		{ name = "buffer" },
 		{ name = "path" },
 	},
@@ -119,10 +118,11 @@ cmp.setup({
 		select = false,
 	},
 	window = {
-		completion = cmp.config.window.bordered(),
-		documentation = cmp.config.window.bordered(),
+		-- completion = cmp.config.window.bordered(),
+		-- documentation = cmp.config.window.bordered(),
 	},
 	experimental = {
 		ghost_text = true,
+        native_menu = false,
 	},
 })
