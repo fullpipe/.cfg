@@ -1,55 +1,70 @@
 -- Use 'q' to quit from common plugins
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "qf", "help", "man", "lspinfo", "spectre_panel", "lir" },
-  callback = function()
-    vim.cmd [[
+    pattern = { "qf", "help", "man", "lspinfo", "spectre_panel", "lir" },
+    callback = function()
+        vim.cmd([[
       nnoremap <silent> <buffer> q :close<CR> 
       set nobuflisted 
-    ]]
-  end,
+    ]]   )
+    end,
 })
 
 -- Remove statusline and tabline when in Alpha
 vim.api.nvim_create_autocmd({ "User" }, {
-  pattern = { "AlphaReady" },
-  callback = function()
-    vim.cmd [[
+    pattern = { "AlphaReady" },
+    callback = function()
+        vim.cmd([[
       set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
       set laststatus=0 | autocmd BufUnload <buffer> set laststatus=3
-    ]]
-  end,
+    ]]   )
+    end,
 })
 
 -- Set wrap and spell in markdown and gitcommit
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "gitcommit", "markdown" },
-  callback = function()
-    vim.opt_local.wrap = true
-    vim.opt_local.spell = true
-  end,
+    pattern = { "gitcommit", "markdown" },
+    callback = function()
+        vim.opt_local.wrap = true
+        vim.opt_local.spell = true
+    end,
 })
 
-vim.cmd "autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif"
+vim.cmd("autocmd BufEnter * ++nested if winnr('$') == 1 && bufname() == 'NvimTree_' . tabpagenr() | quit | endif")
 
 -- Fixes Autocomment
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
-  callback = function()
-    vim.cmd "set formatoptions-=cro"
-  end,
+    callback = function()
+        vim.cmd("set formatoptions-=cro")
+    end,
 })
 
 -- Highlight Yanked Text
 vim.api.nvim_create_autocmd({ "TextYankPost" }, {
-  callback = function()
-    vim.highlight.on_yank { higroup = "Visual", timeout = 300 }
-  end,
+    callback = function()
+        vim.highlight.on_yank({ higroup = "Visual", timeout = 300 })
+    end,
 })
 
 -- Format on save
 -- TODO: it is good to have keymap to save without autoformat
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-    --pattern = {}, 
-    callback = function ()
-        vim.lsp.buf.format({ async = false })
-    end
+    callback = function()
+        if vim.bo.filetype == "go" then
+            require("go.format").goimport()
+        else
+            vim.lsp.buf.format({ async = false })
+        end
+    end,
 })
+
+-- show cursor line only in active window
+local cursorGrp = vim.api.nvim_create_augroup("CursorLine", { clear = true })
+vim.api.nvim_create_autocmd({ "InsertLeave", "WinEnter" }, {
+    pattern = "*",
+    command = "set cursorline",
+    group = cursorGrp,
+})
+vim.api.nvim_create_autocmd(
+    { "InsertEnter", "WinLeave" },
+    { pattern = "*", command = "set nocursorline", group = cursorGrp }
+)

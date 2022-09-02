@@ -4,6 +4,8 @@ local keymap = vim.keymap.set
 local opts = { silent = true }
 
 local nnoremap = require("user.remap").nnoremap
+local inoremap = require("user.remap").inoremap
+local snoremap = require("user.remap").snoremap
 
 --Remap space as leader key
 vim.keymap.set("", "<Space>", "<Nop>", opts)
@@ -35,7 +37,7 @@ nnoremap("<S-l>", ":bnext<CR>")
 nnoremap("<S-h>", ":bprevious<CR>")
 
 -- fast buffer switch
-nnoremap('<leader><leader>', '<C-^>')
+nnoremap("<leader><leader>", "<C-^>")
 
 -- Clear highlights
 nnoremap("<leader>h", "<cmd>nohlsearch<CR>")
@@ -79,6 +81,12 @@ nnoremap("<leader>fb", ":Telescope buffers<CR>")
 -- Comment
 nnoremap("<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>")
 keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>')
+
+-- set keybinds for both INSERT and VISUAL.
+inoremap("<C-n>", "<Plug>luasnip-next-choice", opts)
+snoremap("<C-n>", "<Plug>luasnip-next-choice", opts)
+-- vim.api.nvim_set_keymap("i", "<C-p>", "<Plug>luasnip-prev-choice", {})
+-- vim.api.nvim_set_keymap("s", "<C-p>", "<Plug>luasnip-prev-choice", {})
 
 -- DAP ???
 keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)

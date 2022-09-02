@@ -57,6 +57,7 @@ cargo install stylua
 brew install google-java-format
 brew install flake8
 npm install -g neovim
+npm -g install intelephense
 pip3 install git+https://github.com/psf/black
 brew install julia
 brew install fd
