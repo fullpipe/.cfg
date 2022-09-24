@@ -6,6 +6,7 @@ local opts = { silent = true }
 local nnoremap = require("user.remap").nnoremap
 local inoremap = require("user.remap").inoremap
 local snoremap = require("user.remap").snoremap
+local xnoremap = require("user.remap").xnoremap
 
 --Remap space as leader key
 vim.keymap.set("", "<Space>", "<Nop>", opts)
@@ -57,6 +58,7 @@ nnoremap("x", '"_x')
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
+inoremap("<C-c>", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -80,7 +82,7 @@ nnoremap("<leader>fb", ":Telescope buffers<CR>")
 
 -- Comment
 nnoremap("<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>")
-keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>')
+xnoremap("<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>')
 
 -- set keybinds for both INSERT and VISUAL.
 inoremap("<C-n>", "<Plug>luasnip-next-choice", opts)
