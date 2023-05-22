@@ -4,6 +4,9 @@ brew install svn
 brew tap homebrew/cask-fonts
 brew install --cask font-source-code-pro
 brew install --cask font-sauce-code-pro-nerd-font
+brew install font-anonymous-pro
+brew install font-anonymice-nerd-font
+brew install font-jetbrains-mono-nerd-font
 brew install node
 brew install go
 brew install fzf
@@ -30,6 +33,7 @@ brew install mermaid-cli
 
 brew install kubectl
 brew install kubectx
+brew install helm
 brew install lens
 
 brew install python
@@ -47,7 +51,7 @@ brew install watch
 brew install lux
 brew install notion
 
-# keyboard 
+# keyboard
 brew tap homebrew/cask-drivers
 brew install --cask qmk-toolbox
 
@@ -63,3 +67,4 @@ brew install julia
 brew install fd
 brew install lua-language-server
 brew install yaml-language-server
+brew install dive
