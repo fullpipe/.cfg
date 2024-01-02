@@ -25,6 +25,7 @@ brew install --cask Transmission
 brew install tmux
 brew install htop
 brew install neovim --HEAD
+brew install octave
 
 brew install php
 pecl install xdebug
@@ -45,6 +46,9 @@ brew install --cask obsidian
 brew install coreutils
 brew install ripgrep
 
+brew tap ethereum/ethereum
+brew install ethereum
+
 brew install --cask temurin
 brew install graphviz
 brew install watch
@@ -57,7 +61,7 @@ brew install --cask qmk-toolbox
 
 # nvim
 npm install -g prettier
-cargo install stylua
+brew install stylua
 brew install google-java-format
 brew install flake8
 npm install -g neovim
@@ -68,3 +72,6 @@ brew install fd
 brew install lua-language-server
 brew install yaml-language-server
 brew install dive
+
+brew tap incu6us/homebrew-tap
+brew install incu6us/homebrew-tap/goimports-reviser

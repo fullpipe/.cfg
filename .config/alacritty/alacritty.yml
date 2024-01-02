@@ -1,5 +1,5 @@
-#env:
-#TERM: xterm-256color
+# env:
+#   TERM: xterm-256color
 
 # Font configuration
 font:
@@ -20,7 +20,7 @@ font:
     #family: AnonymicePro Nerd Font
 
   # Point size
-  size: 16.0
+  size: 15.0
 
 draw_bold_text_with_bright_colors: true
 
